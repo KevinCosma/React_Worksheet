@@ -7,24 +7,26 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {firstName: 'Reggie', lastName: 'White', 
-        names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly']
+        names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly'],
         };
     }
 
-
+    showAlert() {
+        alert("devCodeCamp")
+    }
 
     render(){
-    return (
+        return (
         <div>
             <h1>Name</h1>
             <hr />
             <DisplayNames nameOne={this.state.firstName} />
             <DisplayNames nameTwo={this.state.lastName} />
-            <ol>Names</ol>
+            <h1>Names</h1>
             <hr />
             <NameList fiveNames={this.state.names}/>
             <hr />
-            <AlertUser />
+            <AlertUser coolAlert={this.showAlert}/>
         </div>
     )
     }
